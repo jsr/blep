@@ -11,7 +11,7 @@
                 console.log("Discovering echo");
                 navigator.bluetooth.requestDevice({
                     filters: [{
-                        services: [0xec00]
+                        services: ["ec00"]
                     }]
                 })
                 .then(device => { 
