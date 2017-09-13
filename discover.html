@@ -5,15 +5,18 @@
     <body>
         <H1>hi everybody!</h1>
         This is a test
+        <button type="button" onClick="discover">Discover</button>
         <script>
-            navigator.bluetooth.requestDevice({
-                filters: [{
-                    name: "echo"
-                }]
-            })
-            .then(device => { 
-                document.write("<h2>"+device.name+"</h2>")
-            })
+            function discover() { 
+                navigator.bluetooth.requestDevice({
+                    filters: [{
+                        name: "echo"
+                    }]
+                })
+                .then(device => { 
+                    document.write("<h2>"+device.name+"</h2>")
+                })
+            }
         </script>
     </body>
 </html>
