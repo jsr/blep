@@ -10,9 +10,7 @@
             function discover() { 
                 console.log("Discovering echo");
                 navigator.bluetooth.requestDevice({
-                    filters: [{
-                        services: ["039ce800-98dc-11e7-abc4-cec278b6b50a"]
-                    }]
+                    acceptAllDevices:true
                 })
                 .then(device => { 
                     console.log("Found one");
