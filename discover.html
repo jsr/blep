@@ -5,5 +5,15 @@
     <body>
         <H1>hi everybody!</h1>
         This is a test
+        <script>
+            navigator.bluetooth.requestDevice({
+                filters: [{
+                    name: "echo"
+                }]
+            })
+            .then(device => { 
+                document.write("<h2>"+device.name+"</h2>")
+            })
+        </script>
     </body>
 </html>
