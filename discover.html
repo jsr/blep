@@ -8,12 +8,14 @@
         <button type="button" onClick="discover">Discover</button>
         <script>
             function discover() { 
+                console.log("Discovering echo");
                 navigator.bluetooth.requestDevice({
                     filters: [{
-                        name: "echo"
+                        services: ["echo"]
                     }]
                 })
                 .then(device => { 
+                    console.log("Found one");
                     document.write("<h2>"+device.name+"</h2>")
                 })
             }
